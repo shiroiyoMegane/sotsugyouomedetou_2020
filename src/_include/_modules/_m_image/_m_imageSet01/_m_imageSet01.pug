@@ -1,0 +1,16 @@
+
+mixin m-imageSet01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			imageTag:  tg.imageTag ? tg.imageTag : "div",
+			baseName:  tg.baseName ? tg.baseName : "m-imageSet01",
+			className: tg.className ? " " + tg.className : " " + "",
+			imageUrl:  tg.imageUrl ? tg.imageUrl : "",
+			alt:       tg.alt ? tg.alt : "ダミーテキスト"
+		}
+		
+	#{op.tag}( class = op.baseName + op.className ).com-image
+		#{op.imageTag}.image
+			img(src= op.imageUrl + "?rev", alt= op.alt)
+			block

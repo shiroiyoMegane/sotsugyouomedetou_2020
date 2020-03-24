@@ -1,0 +1,13 @@
+mixin m-inputFileBox01(tg)
+	-
+		var op = {
+			tag:         tg.tag ? tg.tag : "div",
+			id:          tg.id ? tg.id : "",
+			name:        tg.name ? tg.name : "",
+			baseName:    tg.baseName ? tg.baseName : "m-inputFileBox01",
+			className:   tg.className ? tg.className : ""
+		}
+
+	#{op.tag}( class = op.baseName + " " + op.className )
+		label
+			input(type="file" class= op.inputClass name= op.name id= op.id )

@@ -1,0 +1,18 @@
+mixin m-breadcrumb01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "m-breadcrumb01",
+			className: tg.className ? tg.className : "",
+			list:      tg.list ? tg.list : [{text:"ホーム", url:"#"}, {text:"下層ページ", url:"#"}, {text:"下層ページ"}],
+		}
+	
+	#{op.tag}( class = op.baseName + " " + op.className )
+		ol
+			each val, index in op.list
+				li
+					if val.url
+						a(href= val.url)
+							span!= val.text
+					else
+						span!= val.text

@@ -1,0 +1,63 @@
+
+.m-borderBottomTitle01
+	margin-bottom 30px
+	&.is-center
+		.com-title
+			text-align center
+	&:last-child
+		margin-bottom 0
+
+	+MQ_MAX(SP_RES_WID01)
+		margin-bottom 20px
+
+	&>.group
+		margin-bottom 10px
+		&:last-child
+			margin-bottom 0
+		&.is-primary
+			display flex
+			justify-content space-between
+			align-items center
+			padding-bottom 10px
+			border-bottom 1px solid #ccc
+			+MQ_MAX(SP_RES_WID01)
+				display block
+			
+		.com-title
+			width 100%
+			line-height 1.0
+			
+			span
+				fontSize(18)
+				margin-right 10px
+				font-weight bold
+				line-height 1.0
+				+MQ_MAX(SP_RES_WID01)
+					display block
+					margin-bottom 5px
+					&:last-child
+						margin-bottom 0
+				
+				&:last-child
+					margin-right 0
+				&.is-large
+					fontSize(22)
+				&.is-small
+					fontSize(14)
+	
+
+		// ここ以下はbeforeとafter使わなければいらない
+		.titleBefore
+			flex-shrink 0
+			margin-right 10px
+			+MQ_MAX(SP_RES_WID01)
+				margin 0 0 10px
+		.titleAfter
+			flex-shrink 0
+			margin-left 10px
+			+MQ_MAX(SP_RES_WID01)
+				margin 10px 0 0
+			.com-btn
+				fontSize(12)
+				.btnWrapper
+					padding 10px 40px 10px 20px

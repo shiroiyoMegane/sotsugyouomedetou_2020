@@ -1,0 +1,33 @@
+mixin m-borderBottomTitle01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "m-borderBottomTitle01",
+			className: tg.className ? " " + tg.className : "",
+			before: tg.before ? tg.before : false,
+			after: tg.after ? tg.after : false,
+			titleBefore: tg.titleBefore ? tg.titleBefore : false,
+			titleAfter: tg.titleAfter ? tg.titleAfter : false,
+		}
+	div( class = op.baseName + op.className )
+		block
+		if op.before == true
+			.group.is-before
+				+beforeGroup()
+		.group.is-primary
+			if op.titleBefore == true
+				.titleBefore
+					+titleBefore()
+			#{op.tag}.com-title
+				if tg.largeTitle
+					span.is-large!= tg.largeTitle
+				if tg.title
+					span.is-title!= tg.title
+				if tg.smallTitle
+					span.is-small!= tg.smallTitle
+			if op.titleAfter == true
+				.titleAfter
+					+titleAfter()
+		if op.after == true
+			.group.is-after
+				+afterGroup()

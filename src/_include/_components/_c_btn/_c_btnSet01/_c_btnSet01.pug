@@ -1,0 +1,18 @@
+mixin c-btnSet01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "c-btnSet01",
+			className: tg.className ? tg.className : "",
+			colClass: tg.colClass ? tg.colClass : "is-two",
+			parent: tg.parent ? tg.parent : "ul",
+		}
+
+	#{op.tag}( class = op.baseName + " " + op.className )
+		+l-colSet01({tag: op.parent, className: op.colClass})
+			if tg.list
+				each val, index in tg.list
+					li
+						+m-borderBtn01(val)
+			else
+				block

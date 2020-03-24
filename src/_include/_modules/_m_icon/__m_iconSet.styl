@@ -1,0 +1,152 @@
+//- モジュール - アイコンセット
+iconWidth = 16px
+iconHeight = 16px
+
+iconOption()
+	&:before, &:after
+		display inline-block
+		width iconWidth
+		height 16px
+		vertical-align middle
+		
+	&:before
+		display none
+	
+	&.icon-before
+		&:before
+			display inline-block
+		&:after
+			display none
+
+outerHashIcon()
+	&:before, &:after
+		transform translate3d(0, -50%, 0) rotate(90deg)
+	&[href*=".html"]
+		&:before, &:after
+			transform translate3d(0, -50%, 0) rotate(0)
+
+outerIcon()
+	&:before, &:after
+		fontIconSet("\EA07")
+		
+pdfIcon()
+	&:before, &:after
+		fontIconSet("\EA08")
+
+pptIcon()
+	&:before, &:after
+		fontIconSet("\EA09")
+
+docIcon()
+	&:before, &:after
+		fontIconSet("\EA02")
+
+excelIcon()
+	&:before, &:after
+		fontIconSet("\EA04")
+
+musicIcon()
+	&:before, &:after
+		fontIconSet("\EA06")
+
+movieIcon()
+	&:before, &:after
+		fontIconSet("\EA05")
+
+etcIcon()
+	&:before, &:after
+		fontIconSet("\EA03")
+
+defaultIcon()
+	&:before, &:after
+		fontIconSet("\EA01")
+		
+	&:before
+		display none
+
+iconSet()
+	&[target^='_blank'], &[href$='.pdf'],
+	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
+	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
+	&[href$='.xlsm'], &[href$='.csv'], &[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
+	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+		iconOption()
+		&:before, &:after
+			color SITE_COLOR01
+	&[href*="#"]
+		outerHashIcon()
+	&[target^='_blank']
+		outerIcon()
+	&[href$='.pdf']
+		pdfIcon()
+	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
+		docIcon()
+	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
+		excelIcon()
+	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+		pptIcon()
+	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
+		musicIcon()
+	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+		movieIcon()
+	&[href$='.rtf']
+		etcIcon()
+	defaultIcon()
+	span
+		vertical-align middle
+
+.m-iconSet
+	a
+		&[target^='_blank'], &[href$='.pdf'],
+		&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
+		&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
+		&[href$='.xlsm'], &[href$='.csv'], &[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+		&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+		&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+		&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
+		&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+			.moduleWrapper
+				iconOption()
+		&[href*="#"]
+			.moduleWrapper
+				outerHashIcon()
+		&[target^='_blank']
+			.moduleWrapper
+				outerIcon()
+		&[href$='.pdf']
+			.moduleWrapper
+				pdfIcon()
+		&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
+			.moduleWrapper
+				docIcon()
+		&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
+			.moduleWrapper
+				excelIcon()
+		&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+			.moduleWrapper
+				pptIcon()
+		&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+		&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+		&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
+			.moduleWrapper
+				musicIcon()
+		&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+			.moduleWrapper
+				movieIcon()
+		&[href$='.rtf']
+			.moduleWrapper
+				etcIcon()
+		.moduleWrapper
+			defaultIcon()
+			&:after
+				width iconWidth
+				height iconHeight
+				color inherit
+
+			span
+				vertical-align middle

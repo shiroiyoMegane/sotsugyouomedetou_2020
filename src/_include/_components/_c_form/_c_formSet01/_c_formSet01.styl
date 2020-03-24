@@ -1,0 +1,54 @@
+.c-formSet01
+	table
+		width 100%
+	
+	tr
+		border-top 1px solid #eee
+
+		+MQ_MAX(SP_RES_WID01)
+			display block
+			margin-top 15px
+			padding-top 15px
+
+		&:first-child
+			border-top none
+
+			+MQ_MAX(SP_RES_WID01)
+				margin-top 0
+				padding-top 0
+
+	th, td
+		padding 15px
+		box-sizing border-box
+
+		+MQ_MAX(SP_RES_WID01)
+			display block
+			padding 0
+	
+	th
+		width 150px
+		+MQ_MAX(SP_RES_WID01)
+			width 100%
+			margin-bottom 10px
+
+		.inner
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+
+	input[type="text"], select, textarea
+		width 100%
+
+	input[type="text"], select
+		height 40px
+	
+	textarea
+		height 200px
+	
+	.tag
+		span
+			display block
+			padding 0.3em 0.5em
+			background-color #efefef
+			fontSize(12)
+			line-height 1.0

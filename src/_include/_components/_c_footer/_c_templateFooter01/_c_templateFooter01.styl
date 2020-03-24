@@ -1,0 +1,42 @@
+footer.c-templateFooter01
+    background-color #121212
+    +MQ_MAX(PC_RES_WID01)
+        padding pSet(60) 0
+    +MQ_MIN(PC_RES_WID01)
+        padding 60px 0
+
+    $primaryGroup
+        display flex
+        justify-content space-between
+
+    $logoBlock
+        // fontSize(16)
+        letter-spacing 0.2em
+        vwFontSet(16)
+    
+    $navBlock
+        ul
+            display flex
+            flex-wrap wrap
+        li
+            margin-right 1.5em
+            vwFontSet(11)
+            &:last-child
+                margin-right 0
+        a
+            color #999
+            text-decoration none
+    
+    $copyrightBlock
+        color #999
+        vwFontSet(11)
+
+    &>.l-contentsWidth
+        &>.group
+            &.is-primary
+                @extend $primaryGroup
+            &>.block
+                &.is-nav
+                    @extend $navBlock
+                &.is-copyright
+                    @extend $copyrightBlock

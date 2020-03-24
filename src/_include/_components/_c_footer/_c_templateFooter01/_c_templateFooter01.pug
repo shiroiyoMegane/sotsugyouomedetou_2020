@@ -1,0 +1,25 @@
+mixin c-templateFooter01
+	footer.c-templateFooter01
+		+l-contentsWidth({tag:"div"})
+			.group.is-primary
+				.block.is-nav
+					nav.footerNav
+						nav
+							ul
+								li
+									a(href=pageOption.RELATIVE_PATH + "index.html")
+										span TOP
+								li
+									a(href=pageOption.RELATIVE_PATH + "manual/")
+										span MANUAL
+								li
+									a(href=pageOption.RELATIVE_PATH + "module/")
+										span MODULE
+								li
+									a(href=pageOption.RELATIVE_PATH + "component/")
+										span COMPONENT
+								li
+									a(href=pageOption.RELATIVE_PATH + "javascript/")
+										span JAVASCRIPT
+				.block.is-copyright
+					p copyright xxxxxxxxxxxxxxxxxxxxxxx

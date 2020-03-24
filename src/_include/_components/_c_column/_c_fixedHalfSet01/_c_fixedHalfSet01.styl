@@ -1,0 +1,60 @@
+//- コンポーネント - 画像+テキストコンポーネント01
+.c-fixedHalfSet01
+	PADDING = 20px
+
+	&.is-contentsLeft
+		+MQ_MIN(SP_RES_WID01)
+			.group
+				&.is-primary
+					justify-content space-between
+			.block
+				&.is-fixed
+					order 1
+					padding-left PADDING
+
+	&.is-contentsRight
+		+MQ_MIN(SP_RES_WID01)
+			.block
+				&.is-fixed
+					padding-right PADDING
+
+	&>.group
+		&.is-before
+			margin-bottom 30px
+		&.is-primary
+			+MQ_MIN(SP_RES_WID01)
+				display flex
+		&.is-after
+			margin-top 30px
+
+		.block
+			&.is-fixed
+				+MQ_MAX(SP_RES_WID01)
+					width 100%
+					margin-bottom 10px
+					padding 0
+
+				
+			&.is-text
+				width 100%
+
+		.area
+			&.is-btn
+				min-width 300px
+				+MQ_MAX(SP_RES_WID01)
+					min-width 0
+				.com-btn
+					margin-bottom 10px
+					&:last-child
+						margin-bottom 0
+
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+			&.is-sub
+				fontSize(12)
+
+			.com-image
+				img
+					+MQ_MAX(SP_RES_WID01)
+						width 100%

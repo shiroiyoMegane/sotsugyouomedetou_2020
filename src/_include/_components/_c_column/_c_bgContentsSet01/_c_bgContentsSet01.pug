@@ -1,0 +1,20 @@
+mixin c-bgContentsSet01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "c-bgContentsSet01",
+			className: tg.className ? " " + tg.className : " " + "is-contentsRight",
+			before: tg.before ? tg.before : false,
+			after: tg.after ? tg.after : false,
+		}
+
+	#{op.tag}( class = op.baseName + op.className )
+		block
+		if op.before == true
+			.group.is-before
+				+beforeGroup()
+		.group.is-primary
+			+primaryGroup()
+		if op.after == true
+			.group.is-after
+				+afterGroup()

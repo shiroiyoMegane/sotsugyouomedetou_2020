@@ -1,0 +1,9 @@
+mixin m-textLabel01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "p",
+			baseName:  tg.baseName ? tg.baseName : "m-textLabel01",
+			className: tg.className ? " " + tg.className : "",
+		}
+	#{op.tag}( class = op.baseName + op.className )
+		span.is-text!= tg.text

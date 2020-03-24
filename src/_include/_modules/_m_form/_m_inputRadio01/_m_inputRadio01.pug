@@ -1,0 +1,19 @@
+mixin m-inputRadio01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			name:      tg.name ? tg.name : "",
+			text:      tg.text ? tg.text : {id:"radio", text:"ラジオ"},
+			baseName:  tg.baseName ? tg.baseName : "m-inputRadio01",
+			className: tg.className ? tg.className : ""
+		}
+
+	#{op.tag}( class = op.baseName + " " + op.className )
+		each val, index in op.text
+			span.radio
+				if index == 0
+					input(type="radio" class= op.radioClass name= op.name id= val.id checked= "checked" value= val.text)
+				else
+					input(type="radio" class= op.radioClass name= op.name id= val.id value= val.text)
+				label(for= val.id)!= val.text
+					block

@@ -1,0 +1,31 @@
+footer.c-footer01
+	.navBlock
+		+MQ_MIN(SP_RES_WID01)
+			padding 10px
+			background-color #dfdfdf
+		.footerNav
+			+MQ_MAX(SP_RES_WID01)
+				&>ul
+					&>li
+						width 100%
+						&>a
+							padding 15px
+							background-color #dfdfdf
+		.childNav
+			&>ul
+				+MQ_MIN(SP_RES_WID01)
+					padding-left 1.0em
+				+MQ_MAX(SP_RES_WID01)
+					padding 15px
+				&>li
+					&>a
+						fontSize(12)
+						
+		a
+			display block
+			color inherit
+			text-decoration none
+	.copyBlock
+		padding 15px
+		background-color #cfcfcf
+		fontSize(11)

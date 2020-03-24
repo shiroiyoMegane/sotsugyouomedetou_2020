@@ -1,0 +1,50 @@
+.c-liquidHalfSet01
+	
+	&.is-contentsLeft
+		+MQ_MIN(SP_RES_WID01)
+			.block
+				&:first-child
+					order 1
+
+	&>.group
+		&.is-before
+			margin-bottom 30px
+		&.is-primary
+			border 1px solid SITE_COLOR02
+			+MQ_MIN(SP_RES_WID01)
+				display flex
+				align-items center
+
+			.block
+				&.is-contents
+					position relative
+					&:first-child
+						+MQ_MIN(SP_RES_WID01)
+							width 60%
+							min-height 300px
+						+MQ_MAX(SP_RES_WID01)
+							padding-top 50%
+					&:last-child
+						+MQ_MIN(SP_RES_WID01)
+							width 40%
+					
+				.blockWrapper
+					padding 15px
+					box-sizing border-box
+		&.is-after
+			margin-top 30px
+	
+		.area
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+		
+			&.is-image
+				position absolute
+				top 0
+				left 0
+				width 100%
+				min-height 100%
+				background-position center center
+				background-repeat no-repeat
+				background-size cover

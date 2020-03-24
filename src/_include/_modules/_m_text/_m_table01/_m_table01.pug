@@ -1,0 +1,12 @@
+mixin m-table01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "m-table01",
+			className: tg.className ? tg.className : "",
+		}
+
+	#{op.tag}( class = op.baseName + " " + op.className )
+		.tableWrapper
+			table
+				block

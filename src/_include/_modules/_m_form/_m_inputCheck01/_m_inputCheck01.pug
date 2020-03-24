@@ -1,0 +1,19 @@
+
+mixin m-inputCheck01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			id:        tg.id ? tg.id : "",
+			name:      tg.name ? tg.name : "",
+			text:      tg.text ? tg.text : "チェック",
+			baseName:  tg.baseName ? tg.baseName : "m-inputCheck01",
+			className: tg.className ? tg.className : ""
+			
+		}
+
+	#{op.tag}( class = op.baseName + " " + op.className )
+		each val, index in op.text
+			- var idName = op.name + "0" + index
+			label(for= (op.id ? op.id : idName))
+				input(type="checkbox" name= op.name id= (op.id ? op.id : idName))
+				span.is-text!= val

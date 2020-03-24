@@ -1,0 +1,52 @@
+.c-newsSet01
+	dl
+		display flex
+		flex-wrap wrap
+		
+	dt, dd
+		margin-top 15px
+		padding-top 15px
+		border-top 1px solid #ccc
+		+MQ_MAX(SP_RES_WID01)
+			margin-top 10px
+		&:nth-of-type(1)
+			margin-top 0
+			padding-top 0
+			border-top none
+
+	.titleBlock
+		width 170px
+		display flex
+		flex-wrap wrap
+		aline-items center
+
+		+MQ_MAX(SP_RES_WID01)
+			width 100%
+
+	.textBlock
+		width calc(100% - 170px)
+
+		+MQ_MAX(SP_RES_WID01)
+			width 100%
+
+	.date
+		padding-top 3px
+		fontSize(13)
+		font-weight bold
+
+	.tag
+		display table
+		width 50px
+		margin-top 3px
+		margin-left 8px
+		border 1px solid #ccc
+		fontSize(11)
+		text-align center
+	a
+		color inherit
+	.moduleWrapper
+		vertical-align middle
+		&:after
+			margin-left 10px
+	.moduleInner
+		color DF_URL_TEXT_COLOR

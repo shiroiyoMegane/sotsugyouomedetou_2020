@@ -1,0 +1,60 @@
+.c_canvasSliderSet01
+	position relative
+	overflow hidden
+	.canvasBlock
+		canvas
+			color #FFF
+	.textBlock
+		position absolute
+		top 50%
+		left 15px
+		width 100%
+		max-width 480px
+		padding 40px
+		box-sizing border-box
+		background-color rgba(0,0,0,0.5)
+		transform translate3d(0,-50%,0)
+		+MQ_MAX(SP_RES_WID01)
+			width 100%
+		
+		.subTitle
+			color #FFF
+		.title
+			margin-bottom 20px
+			color #FFF
+			fontSize(40)
+			font-weight bold
+			line-height 1.2
+		.text
+			margin-bottom 50px
+			color #FFF
+			fontSize(14)
+		.btn
+			a
+				display block
+				padding 20px
+				box-sizing border-box
+				background-color #FFF
+				color inherit
+				text-decoration none
+
+	.btnBlock
+		position absolute
+		right 20px
+		bottom 20px
+		display flex
+		+MQ_MAX(SP_RES_WID01)
+			position absolute
+			right 30px
+			bottom 30px
+		.pager
+			cursor pointer
+			display flex
+			justify-content center
+			align-items center
+			width 40px
+			height 40px
+			margin-left 10px
+			border-radius 100px
+			border 1px solid #F2F2F2
+			color #F2F2F2

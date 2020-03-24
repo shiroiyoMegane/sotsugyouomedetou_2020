@@ -1,0 +1,40 @@
+mixin c-header01
+	header.c-header01
+		+l-contentsWidth({tag:"div"})
+			.contentsArea
+				.logoBlock
+					h1.logo
+						span
+							img(src="https://placeimg.com/200/70/animals", alt="")
+				.navBlock
+					.subNavArea
+						.m-inputText01
+							input(type="text")
+						nav.subNav
+							ul
+								+m-list01({url:"#", text:"サブナビ"})
+								+m-list01({url:"#", text:"サブナビ"})
+								+m-list01({url:"#", text:"サブナビ"})
+					.globalNavArea
+						nav.globalNav
+							ul
+								+m-list01({url:"#", text:"ナビゲーション"})
+									.childNav
+										+l-contentsWidth({tag:"div"})
+											+l-colSet01({className: "is-six"})
+												+m-list01({url:"#", text:"サブナビ"})
+												+m-list01({url:"#", text:"サブナビ"})
+												+m-list01({url:"#", text:"サブナビ"})
+												+m-list01({url:"#", text:"サブナビ"})
+												+m-list01({url:"#", text:"サブナビ"})
+												+m-list01({url:"#", text:"サブナビ"})
+								+m-list01({url:"#", text:"ナビゲーション"})
+									.childNav
+										+l-contentsWidth({tag:"div"})
+											+l-colSet01({className: "is-six"})
+												+m-list01({url:"#", text:"サブナビ"})
+												+m-list01({url:"#", text:"サブナビ"})
+												+m-list01({url:"#", text:"サブナビ"})
+								+m-list01({url:"#", text:"ナビゲーション"})
+								+m-list01({url:"#", text:"ナビゲーション"})
+								+m-list01({url:"#", text:"ナビゲーション"})

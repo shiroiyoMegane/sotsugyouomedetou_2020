@@ -1,0 +1,80 @@
+//- コンポーネント - 画像+テキストコンポーネント04
+.c-bgContentsSet01
+	IMAGE_WIDTH = 700px
+
+	&.is-contentsLeft
+		.block
+			&.is-contents
+				&:first-child
+					right 0
+
+	&.is-contentsRight
+		.group
+			&.is-primary
+				justify-content flex-end
+		.block
+			&.is-contents
+				&:first-child
+					left 0
+	
+	&>.group
+		&.is-before
+			margin-bottom 30px
+		&.is-primary
+			display flex
+			align-items center
+			position relative
+			overflow hidden
+			min-height 300px
+
+		&.is-after
+			margin-top 30px
+
+		.block
+			&.is-contents
+				&:first-child
+					position absolute
+					height 100%
+					+MQ_MIN(SP_RES_WID01)
+						width IMAGE_WIDTH
+					+MQ_MAX(SP_RES_WID01)
+						width calc(100% - 40px)
+						padding-top 50%
+						margin-bottom 10px
+						padding 0
+
+				&:last-child
+					position relative
+					z-index 1
+					padding 10px 0
+					+MQ_MIN(SP_RES_WID01)
+						width "calc(100% - %s + 100px)" % IMAGE_WIDTH
+						min-width 400px
+						height 100%
+					+MQ_MAX(SP_RES_WID01)
+						width 80%
+		.area
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+			&.is-image
+				position absolute
+				top 0
+				left 0
+				width 100%
+				height 100%
+				background-position center center
+				background-repeat no-repeat
+				background-size cover
+
+			&.is-btn
+				.com-btn
+					margin-bottom 10px
+					display table
+					+MQ_MIN(SP_RES_WID01)
+						min-width 300px
+					+MQ_MAX(SP_RES_WID01)
+						max-width 300px
+						width 100%
+					&:last-child
+						margin-bottom 0

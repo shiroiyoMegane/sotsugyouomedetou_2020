@@ -1,0 +1,55 @@
+.c-mainvisualSet01
+	position relative
+
+	.slick-arrow
+		position absolute
+		top 50%
+		width 50px
+		height 50px
+		margin-top -25px
+		background-color SITE_COLOR01
+		z-index 100
+		cursor pointer
+
+		&.slick-prev
+			left 10px
+		&.slick-next
+			right 10px
+
+	.slick-dots
+		display flex
+		position absolute
+		bottom 10px
+		left 5px
+		width 100%
+
+		&.dots-left
+			
+		li
+			display flex
+			justify-content center
+			align-items center
+			width 20px
+			height 20px
+			margin 0 5px
+			background-color rgba(255,255,255,0.5)
+			border-radius 50px
+			cursor pointer
+			&:hover
+				span
+					width 14px
+					height 14px
+			span
+				display block
+				width 8px
+				height 8px
+				background-color #FFF
+				border-radius 50px
+				transition all 0.3s ease
+
+
+	.slide
+		.image
+			width 100%
+			img
+				width 100%

@@ -1,0 +1,15 @@
+mixin m-inputSelect01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			id:        tg.id ? tg.id : "",
+			name:      tg.name ? tg.name : "",
+			text:      tg.text ? tg.text : {id:"radio", text:"ラジオ"},
+			baseName:  tg.baseName ? tg.baseName : "m-inputSelect01",
+			className: tg.className ? tg.className : ""
+		}
+
+	#{op.tag}( class = op.baseName + " " + op.className )
+		span.selectWrapper
+			select(id= op.id name= op.name)
+				block

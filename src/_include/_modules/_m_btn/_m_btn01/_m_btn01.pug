@@ -1,0 +1,20 @@
+mixin m-borderBtn01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "m-borderBtn01",
+			className: tg.className ? " " + tg.className : "",
+			url:       tg.url ? tg.url : "",
+			blank:     tg.blank ? tg.blank : "",
+			text:      tg.text ? tg.text : "ボタン",
+		}
+	
+	#{op.tag}( class = op.baseName + op.className ).com-btn
+		if(op.blank=="_blank")
+			a(href= op.url target="_blank")
+				span.moduleWrapper
+					span.moduleInner!= op.text
+		else
+			a(href= op.url)
+				span.moduleWrapper
+					span.moduleInner!= op.text

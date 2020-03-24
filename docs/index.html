@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="is-2020_sotsugyouomedetou" lang="ja">
+  <head>
+    <link rel="canonical" href="undefinedclass URL {
+  constructor(input, base) {
+    // toUSVString is not needed.
+    input = `${input}`;
+    if (base !== undefined) {
+      base = new URL(base);
+    }
+    parse(this, input, base);
+  }
+
+  get [special]() {
+    return (this[context].flags &amp; URL_FLAGS_SPECIAL) !== 0;
+  }
+
+  get [cannotBeBase]() {
+    return (this[context].flags &amp; URL_FLAGS_CANNOT_BE_BASE) !== 0;
+  }
+
+  // https://url.spec.whatwg.org/#cannot-have-a-username-password-port
+  get [cannotHaveUsernamePasswordPort]() {
+    const { host, scheme } = this[context];
+    return ((host == null || host === '') ||
+            this[cannotBeBase] ||
+            scheme === 'file:');
+  }
+
+  [util.inspect.custom](depth, opts) {
+    if (this == null ||
+        Object.getPrototypeOf(this[context]) !== URLContext.prototype) {
+      throw new ERR_INVALID_THIS('URL');
+    }
+
+    if (typeof depth === 'number' &amp;&amp; depth &lt; 0)
+      return opts.stylize('[Object]', 'special');
+
+    var ctor = getConstructorOf(this);
+
+    var obj = Object.create({
+      constructor: ctor === null ? URL : ctor
+    });
+
+    obj.href = this.href;
+    obj.origin = this.origin;
+    obj.protocol = this.protocol;
+    obj.username = this.username;
+    obj.password = this.password;
+    obj.host = this.host;
+    obj.hostname = this.hostname;
+    obj.port = this.port;
+    obj.pathname = this.pathname;
+    obj.search = this.search;
+    obj.searchParams = this.searchParams;
+    obj.hash = this.hash;
+
+    if (opts.showHidden) {
+      obj.cannotBeBase = this[cannotBeBase];
+      obj.special = this[special];
+      obj[context] = this[context];
+    }
+
+    return util.inspect(obj, opts);
+  }
+}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="" property="og:title">
+    <meta content="" property="og:description">
+    <meta content="article" property="og:type">
+    <meta content="ja_JP" property="og:locale">
+    <link rel="stylesheet" href="../assets/css/style.css?rev=261ce92a7ad08f1e">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.ico?rev=261ce92a7ad08f1e">
+    <link rel="apple-touch-icon" href="../assets/images/common/webclip.png?rev=261ce92a7ad08f1e">
+    <script src="../assets/js/vendor.js?rev=261ce92a7ad08f1e"></script>
+    <script src="../assets/js/function.js?rev=261ce92a7ad08f1e"></script>
+  </head>
+  <body>
+    <main id="l-contentsTop">
+      <div class="l-contentsBody">
+        <div class="l-contentsWrapper" id="barba-wrapper">
+          <div class="barba-container">
+            <div class="l-mainContents">
+              <div class="c-arcanoidSet01">
+                <div class="canvasBlock">
+                  <canvas id="arcanoid" width="1000" height="750"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

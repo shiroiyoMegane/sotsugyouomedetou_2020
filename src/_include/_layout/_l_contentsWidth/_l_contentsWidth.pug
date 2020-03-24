@@ -1,0 +1,10 @@
+mixin l-contentsWidth(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "l-contentsWidth",
+			className: tg.className ? tg.className : ""
+		}
+		
+	#{op.tag}( class = op.baseName + " " + op.className )
+		block

@@ -1,0 +1,10 @@
+mixin m-componentTitle01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "m-componentTitle01",
+			className: tg.className ? " " + tg.className : " " + "",
+			text:      tg.text ? tg.text : "ダミータイトルです"
+		}
+	#{op.tag}( class = op.baseName + op.className ).com-title
+		span!= op.text

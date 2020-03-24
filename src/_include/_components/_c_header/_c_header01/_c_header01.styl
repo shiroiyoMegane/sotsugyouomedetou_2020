@@ -1,0 +1,123 @@
+//- 複合コンポーネント - ヘッダー01
+header.c-header01
+	position relative
+	padding-top 10px
+	+MQ_MAX(SP_RES_WID01)
+		padding 15px 15px 0
+
+	.contentsArea
+		+MQ_MIN(SP_RES_WID01)
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			align-items center
+
+	.logoBlock
+		+MQ_MAX(SP_RES_WID01)
+			padding-bottom 15px
+
+	.navBlock
+		+MQ_MAX(SP_RES_WID01)
+			display none
+			flex-direction column
+			position absolute
+			left 0
+			width 100%
+			background-color #FFF
+
+	.subNavArea
+		+MQ_MIN(SP_RES_WID01)
+			display flex
+			flex-wrap wrap
+			justify-content flex-end
+			align-items center
+			margin-bottom 1.5em
+		
+		+MQ_MAX(SP_RES_WID01)
+			order 1
+			padding 15px
+
+		.subNav
+			+MQ_MIN(SP_RES_WID01)
+				margin-left 1.5em
+				ul
+					display flex
+					flex-wrap wrap
+					justify-content flex-end
+
+				li
+					margin-left 1.0em
+					fontSize(13)
+					&:first-child
+						margin-left 0
+				
+				a
+					display block
+					color inherit
+					text-decoration none
+					line-height 1.0
+
+			+MQ_MAX(SP_RES_WID01)
+				ul
+					display flex
+					flex-wrap wrap
+				li
+					margin-right 10px
+
+		.m-inputText01
+			+MQ_MAX(SP_RES_WID01)
+				margin-bottom 10px
+
+	.globalNavArea
+		+MQ_MAX(SP_RES_WID01)
+			order 0
+		.globalNav
+			+MQ_MIN(SP_RES_WID01)
+				& > ul
+					display flex
+					flex-wrap wrap
+					justify-content flex-end
+					& > li
+						margin-left 1.5em
+						padding-left 1.5em
+						border-left 1px solid #dfdfdf
+						&:first-child
+							margin-left 0
+							padding-left 0
+							border-left none
+						&:hover
+							& > a
+								&+.childNav
+									display block
+						& > a
+							padding 0.5em 0
+							
+			+MQ_MAX(SP_RES_WID01)
+				& > ul
+					& > li
+						& > a
+							padding 15px
+							background-color #dfdfdf
+		.childNav
+			+MQ_MIN(SP_RES_WID01)
+				display none
+				position absolute
+				left 0
+				width 100%
+				background-color #dfdfdf
+
+				ul
+					position relative
+					z-index 1
+				a
+					padding 1.5em 0.5em
+
+			+MQ_MAX(SP_RES_WID01)
+				padding 15px
+				background-color #cfcfcf
+				
+		a
+			display block
+			color inherit
+			text-decoration none
+			line-height 1.0

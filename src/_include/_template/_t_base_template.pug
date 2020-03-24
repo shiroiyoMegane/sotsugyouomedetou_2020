@@ -1,0 +1,30 @@
+doctype html
+include /_include/_settings/_pug/_s_variables
+include /_include/_settings/_pug/_s_mixin
+
+block vars
+
+html(lang="ja" class= "is-" + pageOption.KEY)
+	head
+		include /_include/_settings/_pug/_s_head
+		block library
+	body
+		main#l-contentsTop
+			if pageOption.HEADER
+				.l-contentsHeader
+					block header
+			.l-contentsBody
+				.l-contentsWrapper#barba-wrapper
+					.barba-container
+						if pageOption.SIDE == true
+							.l-sideWrappar
+								aside.l-sideContents
+									block side
+								.l-mainContents
+									block contents
+						else
+							.l-mainContents
+								block contents
+				if pageOption.FOOTER
+					.l-contentsFooter
+						block footer

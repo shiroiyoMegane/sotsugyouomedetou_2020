@@ -1,0 +1,17 @@
+.is-sp
+	display none
+
+	+MQ_MAX(SP_RES_WID01)
+		display block
+		& + .is-pc
+			display none
+
+.is-spOnly
+	display none
+	+MQ_MAX(SP_RES_WID01)
+		display block
+
+.is-pcOnly
+	display none
+	+MQ_MIN(SP_RES_WID01)
+		display block

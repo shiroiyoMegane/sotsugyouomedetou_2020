@@ -1,0 +1,13 @@
+//- 複合コンポーネント - ぱんくずセット01
+.m-breadcrumb01
+	ol
+		font-size 0
+		li
+			display inline-block
+			fontSize(13)
+			&:first-child
+				&:before
+					content none
+			&:before
+				content ">"
+				padding 0 10px

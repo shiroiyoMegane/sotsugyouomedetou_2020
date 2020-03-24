@@ -1,0 +1,21 @@
+mixin c-halfSet02(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "c-halfSet02",
+			className: tg.className ? tg.className : "",
+			col: tg.col ? tg.col : {tag:"div", className:"is-three"},
+			before: tg.before ? tg.before : false,
+			after: tg.after ? tg.after : false,
+		}
+	#{op.tag}( class = op.baseName + " " + op.className )
+		block
+		if op.before == true
+			.group.is-before
+				+beforeGroup()
+		.group.is-primary
+			+l-colSet01(tg.col)
+				+primaryGroup()
+		if op.after == true
+			.group.is-after
+				+afterGroup()

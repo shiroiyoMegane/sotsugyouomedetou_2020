@@ -1,0 +1,26 @@
+.m-imageSet01
+	&.is-imageFull
+		.image
+			width 100%
+			img
+				width 100%
+				height auto
+	.image
+		display table
+		margin 0 auto
+		img
+			// max-width 100%
+			height auto
+		+MQ_MAX(SP_RES_WID01)
+			width 100%
+			text-align center
+
+		figcaption
+			display table-caption
+			caption-side bottom
+			margin-top 10px
+			text-align left
+			
+	iframe
+		+MQ_MAX(SP_RES_WID01)
+			width 100%

@@ -1,0 +1,65 @@
+l-colSet01(tg)
+	SIZE = 100 / tg.col + "%"
+	MARGIN = tg.margin
+
+	&:before, &:after
+		order 1
+		content ""
+		display block
+
+	&>li, &>div
+		if tg.col == 1
+			width 100%
+		else
+			width "calc(%s - %s)" % ( SIZE (    (MARGIN *  (tg.col - 1)) / tg.col    ) );
+		margin-right MARGIN
+		margin-bottom 0
+
+		&:nth-of-type(n + {tg.col+1})
+			margin-top MARGIN
+		
+		&:nth-of-type({tg.col}n)
+			margin-right 0
+
+.l-colSet01
+	SP_MARGIN = 10px
+	PC_MARGIN = 20px
+	
+	display flex
+	flex-wrap wrap
+
+	&:first-child
+		margin-top 0
+
+	&.is-center
+		justify-content center
+
+	&.is-two
+		+MQ_MIN(SP_RES_WID01)
+			l-colSet01({col:2, margin:PC_MARGIN})
+		+MQ_MAX(SP_RES_WID01)
+			l-colSet01({col:1, margin:SP_MARGIN})
+	
+	&.is-three
+		+MQ_MIN(SP_RES_WID01)
+			l-colSet01({col:3, margin:PC_MARGIN})
+		+MQ_MAX(SP_RES_WID01)
+			l-colSet01({col:1, margin:SP_MARGIN})
+
+	&.is-four
+		+MQ_MIN(SP_RES_WID01)
+			l-colSet01({col:4, margin:PC_MARGIN})
+		+MQ_MAX(SP_RES_WID01)
+			l-colSet01({col:2, margin:SP_MARGIN})
+
+	&.is-five
+		+MQ_MIN(SP_RES_WID01)
+			l-colSet01({col:5, margin:PC_MARGIN})
+		+MQ_MAX(SP_RES_WID01)
+			l-colSet01({col:2, margin:SP_MARGIN})
+
+	&.is-six
+		+MQ_MIN(SP_RES_WID01)
+			l-colSet01({col:6, margin:PC_MARGIN})
+		+MQ_MAX(SP_RES_WID01)
+			l-colSet01({col:2, margin:SP_MARGIN})

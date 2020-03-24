@@ -1,0 +1,42 @@
+
+mixin c-qandaSet01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "c-qandaSet01",
+			className: tg.className ? tg.className : "js-accordion",
+		}
+	#{op.tag}( class = op.baseName + " " + op.className )
+		block
+
+mixin c-qandaList01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "c-qandaList01",
+			className: tg.className ? tg.className : "",
+
+			questionClass: tg.questionClass ? tg.questionClass : "js-accordion-parent",
+			questionIcon: tg.questionIcon ? tg.questionIcon : "Q",
+			answerClass: tg.answerClass ? tg.answerClass : "js-accordion-child",
+			answerIcon: tg.answerIcon ? tg.answerIcon : "A",
+		}
+
+	#{op.tag}( class = op.baseName + " " + op.className )
+		block
+		.titleBlock( class = op.questionClass )
+			p.icon
+				span!= op.questionIcon
+			.textArea
+				if tg.question
+					p.title!= tg.question
+				else
+					+questionArea
+		.textBlock( class = op.answerClass )
+			p.icon
+				span!= op.answerIcon
+			.textArea
+				if tg.answer
+					p.text!= tg.answer
+				else
+					+answerArea

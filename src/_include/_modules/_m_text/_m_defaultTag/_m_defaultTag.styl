@@ -1,0 +1,52 @@
+::selection
+	background-color POINT_COLOR01
+	color #ffffff
+
+.m-defaultTag
+	div, p, li, figure, th, td, pre
+		margin-bottom 10px
+		&.is-right
+			text-align right
+		&.is-center
+			text-align center
+		&:last-child
+			margin-bottom 0
+		strong, b
+			font-weight bold
+		strong
+			color DF_URL_TEXT_COLOR
+		i
+			font-style italic
+		sup
+			fontSize(10)
+			vertical-align super
+		sub
+			fontSize(10)
+			vertical-align sub
+	a
+		iconSet()
+	pre
+		padding 10px 20px
+		color #333
+		background-color #f6f7f9
+		fontSize(11)
+		code
+			color #333
+			background-color #f6f7f9
+
+	ul, ol
+		margin-bottom 10px
+		ul, ol
+			margin-top 5px
+			margin-left 1.4em
+			li
+				&:last-child
+					margin-bottom 0
+	ul
+		padding-left 1.3em
+		li
+			list-style disc
+	ol
+		padding-left 1.5em
+		li
+			list-style decimal

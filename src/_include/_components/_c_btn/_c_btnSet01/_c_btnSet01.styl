@@ -1,0 +1,19 @@
+.c-btnSet01
+	&.is-center
+		.l-colSet01
+			justify-content center
+			&:before, &:after
+				display none !important
+	li
+		&>div
+			height 100%
+
+	// // ↓マージン変更したいとき
+	// .l-colSet01
+	// 	SP_MARGIN = 20px
+	// 	PC_MARGIN = 20px
+	// 	&.is-two
+	// 		+MQ_MIN(SP_RES_WID01)
+	// 			l-colSet01({col:2, margin:PC_MARGIN})
+	// 		+MQ_MAX(SP_RES_WID01)
+	// 			l-colSet01({col:1, margin:SP_MARGIN})

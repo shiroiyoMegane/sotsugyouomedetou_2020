@@ -1,0 +1,16 @@
+mixin m-linkModule01(tg)
+	-
+		var op = {
+			url:       tg.url ? tg.url : "",
+			blank:     tg.blank ? tg.blank : "",
+			className: tg.className ? tg.className : "",
+		}
+
+	if(op.blank=="_blank")
+		a(href= op.url target="_blank" class=op.className)
+			span
+				block
+	else
+		a(href= op.url class=op.className)
+			span
+				block

@@ -1,0 +1,48 @@
+//- 複合コンポーネント - QandAセット01
+.c-qandaSet01
+	.titleBlock, .textBlock
+		display flex
+		flex-wrap wrap
+		width 100%
+
+	.titleBlock
+		background-color #efefef
+		.icon
+			background-color #cfcfcf
+
+		.textArea
+			display flex
+			flex-wrap wrap
+			align-items center
+			position relative
+			padding-right 50px
+
+			&:after
+				content ""
+				display block
+				position absolute
+				top 50%
+				right 15px
+				width 30px;
+				height 30px;
+				margin-top -15px
+				background-color #DFDFDF
+	
+	.textBlock
+		.icon
+			background-color #dfdfdf
+
+	.icon
+		display flex
+		flex-wrap wrap
+		justify-content center
+		align-items center
+		width 60px
+		min-height 60px
+		height 100%
+
+	.textArea
+		
+		width calc(100% - 60px)
+		padding 15px
+		box-sizing border-box

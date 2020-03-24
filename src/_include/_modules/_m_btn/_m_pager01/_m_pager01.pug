@@ -1,0 +1,20 @@
+mixin m-pager01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "div",
+			baseName:  tg.baseName ? tg.baseName : "m-pager01",
+			className: tg.className ? " " + tg.className : "",
+			list:      tg.list ? tg.list : [{text:"1"}, {text:"2", url:"#"}, {text:"3", url:"#"}],
+		}
+	
+	#{op.tag}( class = op.baseName + op.className )
+		ul
+			each val, index in op.list
+				li
+					if val.url
+						a(href= val.url)
+							.box
+								span!= val.text
+					else
+						.box
+							span!= val.text
