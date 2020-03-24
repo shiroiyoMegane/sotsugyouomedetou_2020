@@ -78,11 +78,11 @@ window.C_ARCANOID = {
 							dy = -dy;
 							b.status = 0;
 							score++;
-							console.log(score);
+							// console.log(score);
 							
 							switch( score ) {
 								case Math.floor(brickRowCount*brickColumnCount * 0.1):
-									console.log("メッセージ01")
+									console.log("お前たちの実力は、まだまだこんなものじゃあないだろう！")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
@@ -90,56 +90,56 @@ window.C_ARCANOID = {
 									
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.2):
-									console.log("メッセージ02")
+									console.log("はじめは何もできないひよっこ共だったのに")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
 									dy = -speed;
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.3):
-									console.log("メッセージ03")
+									console.log("いつのまにかここまで成長していたとはっ！！")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
 									dy = -speed;
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.4):
-									console.log("メッセージ04")
+									console.log("2年間という時間は無駄じゃあなかったってことか")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
 									dy = -speed;
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.5):
-									console.log("メッセージ05")
+									console.log("だがここは、まだまだ始まりに過ぎない！！！")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
 									dy = -speed;
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.6):
-									console.log("メッセージ06")
+									console.log("長かったように感じる学生生活という時間は、長い人生のスタートラインッッッ！")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
 									dy = -speed;
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.7):
-									console.log("メッセージ07")
+									console.log("ここで、私を倒しても、第２、第３の強敵が現れる！！")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
 									dy = -speed;
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.8):
-									console.log("メッセージ08")
+									console.log("それでも突き進むというのかああぁぁぁっ！！！！")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
 									dy = -speed;
 									break;
 								case Math.floor(brickRowCount*brickColumnCount * 0.9):
-									console.log("メッセージ09")
+									console.log("いいだろう！最後にお前の全てをみせてみろおおおお！！")
 									paddleWidth= paddleWidth -10;
 									speed= speed +1;
 									dx = speed;
@@ -148,7 +148,7 @@ window.C_ARCANOID = {
 							}
 							
 							if(score == brickRowCount*brickColumnCount) {
-								// alert("YOU WIN, CONGRATS!");
+								alert("よもやここまでとは....\nもう言うことはなにもない！！\n無限に続くこの先へ進み続けるがいい！！");
 								// document.location.reload();
 							}
 						}
@@ -229,9 +229,19 @@ window.C_ARCANOID = {
 				else {
 					lives--;
 					if(!lives) {
-						// alert("GAME OVER");
-						cancelAnimationFrame( draw) ;
-						// document.location.reload();
+						if(Math.floor(brickRowCount*brickColumnCount * 0.1)>score) {
+							alert("はい負け〜");
+						} else if(Math.floor(brickRowCount*brickColumnCount * 0.25)>score) {
+							alert("服にホコリが付いてしまったよ。");
+						} else if(Math.floor(brickRowCount*brickColumnCount * 0.4)>score) {
+							alert("ほう、やるじゃあないか。この私がまさか両手を使うことになるとはな。");
+						} else if(Math.floor(brickRowCount*brickColumnCount * 0.5)>score) {
+							alert("ぐぬぬ、なかなか危なかったぞ...　60%も力を解放してしまった...");
+						} else if(Math.floor(brickRowCount*brickColumnCount * 0.6)>score) {
+							alert("ぐはっ！！　あ、あと一秒遅かったらこっちが死んでいた...\nまさかここまで実力をつけていたとはな。この姿になったのはお前で2人目だ！");
+						} else if(Math.floor(brickRowCount*brickColumnCount * 0.8)>score) {
+							alert("ま、まってくれ！\n戦いはここまでにして話し合おうじゃあないか！");
+						}
 					}
 					else {
 						x = canvas.width/2;
