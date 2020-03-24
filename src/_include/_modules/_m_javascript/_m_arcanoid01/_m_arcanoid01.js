@@ -44,7 +44,7 @@ window.C_ARCANOID = {
 		document.addEventListener("mousemove", mouseMoveHandler, false);
 
 		var background = new Image();
-			background.src = "/assets/images/contents/arcanoid_bg.png";
+			background.src = "assets/images/contents/arcanoid_bg.png";
 
 		function keyDownHandler(e) {
 			if(e.keyCode == 39) {
